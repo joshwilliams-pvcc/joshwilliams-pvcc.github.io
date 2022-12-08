@@ -19,16 +19,16 @@ def main():
         continue_search = True
 
         while continue_search: #INNER LOOP
-            randnumber = random.randint(0,TOTAL_TOPICS-1) #items in list started with 0, not 1
+            randnumber = random.randint(0, TOTAL_TOPICS-1) #items in list started with 0, not 1
             if topics[randnumber] == "A":
                 topics[randnumber] = "U"
                 num_used_topics +=1
                 continue_search = False
 
-        print("\Random Topic Number: " + str(randnumber+1)) #items in list start with 0, so add 1
+        print("\nRandom Topic Number: " + str(randnumber+1)) #items in list start with 0, so add 1
         print("List of topic availibility by number:")
         for i in range(TOTAL_TOPICS):
-            print("\t" + str(i+i)+ ". " + topics[i])
+            print("\t" + str(i+1)+ ". " + topics[i])
 
         if num_used_topics == TOTAL_TOPICS:
             print("There are no more topics available at this time.")
@@ -39,3 +39,5 @@ def main():
                 generate_another_randnumber = False
 
 main()
+
+
